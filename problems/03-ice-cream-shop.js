@@ -14,20 +14,24 @@ iceCreamShop([], 'honey lavender'); // false
 
 
 // your code here
-let iceCreamShop = function (flavors, favorite){
 
-  if (flavors.length === 1 && flavors[0] !== favorite){
-    return false
+function iceCreamShop(flavors, favorite) {
+  if (flavors.length === 0) {
+    return false;
   }
-
-  if (flavors[0] === favorite){
-    return true
+  if (favorite === flavors[flavors.length - 1]) {
+    return true;
   }
-
-  return iceCreamShop(flavors.slice(1), favorite)
-
+  
+    return iceCreamShop(flavors.slice(0, flavors.length - 1), favorite);
+  
 }
 
+// iceCreamShop(['vanilla', 'strawberry'], 'blue moon'); // false
+// iceCreamShop(['pistachio', 'green tea', 'chocolate', 'mint chip'], 'green tea'); // true
+console.log(iceCreamShop(['cookies n cream', 'blue moon', 'superman', 'honey lavender', 'sea salt caramel'], 'pistachio')); // false
+console.log(iceCreamShop(['moose tracks'], 'moose tracks')); // true
+// iceCreamShop([], 'honey lavender'); // false
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

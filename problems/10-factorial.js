@@ -16,7 +16,11 @@ factorial(3); // 6
 factorial(5); // 120
 ***********************************************************************/
 
-// your code here
+function factorial(num){
+  if (num < 0) return;
+  if (num === 0) return 1;
+  return num * factorial( n - 1)
+}
   
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

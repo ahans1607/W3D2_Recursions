@@ -4,7 +4,7 @@ it reversed.
 
 Examples:
 
-reverse("house"); // "esuoh"
+
 reverse("dog"); // "god"
 reverse("atom"); // "mota"
 reverse("q"); // "q"
@@ -17,12 +17,13 @@ function reverse (string) {
     return " ";
   }
 
-reversy = reverse(string.slice(0, string.length - 1))
-return string[string.length -1] + reversy
-y;
-
+let letter = string.slice(string.length - 1)
+console.log(letter)
+return letter + reverse(letter[string.length - 1])
 
 }
+
+console.log(reverse("house")); // "esuoh"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
