@@ -12,15 +12,15 @@ sumToN(-8)  // returns null
 ***********************************************************************/
 
 sumToN = (n) => {        // (n * (n+1)) / 2;
-let sum = 0
+// let sum = 0
   if ( n <= 0){
     return null
   }
   // if ( n > 0 ){
   //   sum += n
   // }
-sum += sumToN( n - 1 )
-return sum               //     sumToN(n-1) + n
+// sum += sumToN( n - 1 )
+return sumToN(n-1) + n
 }
 //
 console.log(sumToN(5)) // returns 15
