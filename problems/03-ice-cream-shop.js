@@ -12,20 +12,32 @@ iceCreamShop(['moose tracks'], 'moose tracks'); // true
 iceCreamShop([], 'honey lavender'); // false
 ***********************************************************************/
 
-
-// your code here
-
-function iceCreamShop(flavors, favorite) {
+let iceCreamShop = (flavors, favorite) => {
   if (flavors.length === 0) {
-    return false;
+    return false
   }
-  if (favorite === flavors[flavors.length - 1]) {
+
+  if (flavors[flavors.length - 1] === favorite) {
     return true;
   }
-  
-    return iceCreamShop(flavors.slice(0, flavors.length - 1), favorite);
-  
+
+  flavors.pop();
+  return iceCreamShop(flavors, favorite);
 }
+
+
+
+// function iceCreamShop(flavors, favorite) {
+//   if (flavors.length === 0) {
+//     return false;
+//   }
+//   if (favorite === flavors[flavors.length - 1]) {
+//     return true;
+//   }
+
+//     return iceCreamShop(flavors.slice(0, flavors.length - 1), favorite);
+  
+// }
 
 // iceCreamShop(['vanilla', 'strawberry'], 'blue moon'); // false
 // iceCreamShop(['pistachio', 'green tea', 'chocolate', 'mint chip'], 'green tea'); // true

@@ -18,12 +18,43 @@ Examples:
 exponent(3, 2); // 9
 exponent(2, -2); // 1/4 (or 0.25)
 exponent(5, 5); // 3125
+
+// write a function that takes in two integers; num and power
+// its going to return num
+// num, power could ne negative or positive
+// incase it is positive ; 
+      // base case if we hit 0 the return 
+      // ultimatly return num * num .. power times 
+// incase it is negative;
+      // base case if it also hits 0
+      // then return 1/num * 1/num .. power times 
 ***********************************************************************/
 
-function exponent(b, n) {
-  // your code here
+function exponent(num, power) {
+debugger  
+  if (power < 0){
+  debugger
+  if (power === -1) return 1/num
+  debugger
+  return 1/num * exponent(num, power + 1)
+  }
+  
+  debugger
+
+  if (power > 0){
+  debugger
+  if (power === 1) return num
+  debugger
+  return num * exponent(num, power - 1)
+  }
+  debugger
 }
   
+
+  // console.log(exponent(3, 2))
+  console.log(exponent(2, -2)); // 1/4 (or 0.25)
+  // console.log(exponent(5, 5)); // 3125
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = exponent;

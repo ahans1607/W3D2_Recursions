@@ -5,20 +5,45 @@ contents on one level.
 
 Examples:
 
-
 ***********************************************************************/
 
-// your code here
-function flatten(array){
 
-  if (array.length === 0){
-    return []
-  }
+function flatten(arr) {
+  let newArrau = []
 
-  return (array.flat(Infinity))
-
-
+  arr.array.forEach(element => {
+    
+  });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function flatten(array){
+
+//   if (array.length === 0){
+//     return []
+//   }
+//   return (array.flat(Infinity))
+
+
+// }
 
 console.log(flatten([])); // []
 flatten([1, 2]); // [1, 2]
