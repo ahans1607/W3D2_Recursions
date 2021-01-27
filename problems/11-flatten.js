@@ -5,35 +5,32 @@ contents on one level.
 
 Examples:
 
+1. create function flatten takes in array
+2. array & array[i] could contain nested array
+  base case - if array is empty then return array
+3. take values from inside array and array[i] -- push to new array
+  if array contains nested -- get into array[j] push into new array
+4. return new array
+
 ***********************************************************************/
 
 
 function flatten(arr) {
-  let newArrau = []
+   let newArray = [];
 
-  arr.array.forEach(element => {
-    
-  });
-}
+   if (arr.length === 0){
+     return [];
+   }
+   if (arr.length > 0){
+  //  for(let i = 0; i < arr.length; i++){
 
+  //   let ele = arr[i];
+    newArray.push(arr.flat(Infinity))
+  //  }
+   }
+   return newArray
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  };
 
 // function flatten(array){
 
@@ -46,7 +43,7 @@ function flatten(arr) {
 // }
 
 console.log(flatten([])); // []
-flatten([1, 2]); // [1, 2]
+console.log(flatten([1, 2])); // [1, 2]
 console.log(flatten([1, [2, [3]]])); // [1, 2, 3]
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
