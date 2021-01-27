@@ -28,7 +28,7 @@ base case - if n is 0 or less then return 0
 debugger
 function fibonacci (num){
 debugger
-  if (num <= 1){
+  if (num <= 2){
     debugger
     return 1
     debugger
@@ -36,7 +36,7 @@ debugger
 debugger
   if (num > 1){
     debugger
-    return num + fibonacci(num -1)
+    return fibonacci(num -1) + fibonacci(num -2)
     debugger
   }
 debugger
@@ -48,7 +48,7 @@ console.log(fibonacci(1)); // 1
 console.log(fibonacci(2)); // 1
 console.log(fibonacci(3)); // 2
 console.log(fibonacci(4)); // 3
-console.log(fibonacci(10)); // 55
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = fibonacci;
