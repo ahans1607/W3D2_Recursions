@@ -14,9 +14,9 @@ function range (start, end){
 //
   if (start >= end) return [] // base case
   let tempStart = start + 1 //recursive step
-  let returnVal = range(tempStart, end) //recursive call
+  let returnValue = range(tempStart, end) //recursive call
 
-  returnValue 
+  
 
 returnValue.unshift(start)
 return returnValue;

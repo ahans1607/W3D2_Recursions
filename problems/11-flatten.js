@@ -14,23 +14,54 @@ Examples:
 
 ***********************************************************************/
 
+flatten = (arr) => {
+  if (arr.length === 0){
+    return []
+  }
 
-function flatten(arr) {
-   let newArray = [];
+  value = arr.shift()
+  if(Array.isArray(value)){
+    return flatten(value).concat(flatten(arr))
+  } else {
+    return [value].concat(flatten(arr))
+  }
+}
 
-   if (arr.length === 0){
-     return [];
-   }
-   if (arr.length > 0){
-  //  for(let i = 0; i < arr.length; i++){
 
-  //   let ele = arr[i];
-    newArray.push(arr.flat(Infinity))
-  //  }
-   }
-   return newArray
 
-  };
+
+// console.log(flatten([])); // []
+// console.log(flatten([1, 2])); // [1, 2]
+console.log(flatten([1, [2, [3]]])); // [1, 2, 3]
+
+
+
+
+// function flatten(arr) {
+//    let newArray = [];
+
+//   arr.forEach(ele => {
+//   if (!Array.isArray(ele)){
+//     newArray.push(ele)
+//   } else {
+//     newArray.push(...flatten(ele))
+//   }
+
+//   });
+   
+//    return newArray 
+
+// };
+
+
+// console.log(flatten([])); // []
+// console.log(flatten([1, 2])); // [1, 2]
+// console.log(flatten([1, [2, [3]]])); // [1, 2, 3]
+
+
+
+
+
 
 // function flatten(array){
 
@@ -42,9 +73,7 @@ function flatten(arr) {
 
 // }
 
-console.log(flatten([])); // []
-console.log(flatten([1, 2])); // [1, 2]
-console.log(flatten([1, [2, [3]]])); // [1, 2, 3]
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = flatten;

@@ -25,23 +25,23 @@ base case - if n is 0 or less then return 0
 ***********************************************************************/
 
 // your code here
-debugger
+// debugger
 function fibonacci (num){
-debugger
+// debugger
   if (num <= 2){
-    debugger
+    // debugger
     return 1
-    debugger
+    // debugger
   }
-debugger
+// debugger
   if (num > 1){
-    debugger
+    // debugger
     return fibonacci(num -1) + fibonacci(num -2)
-    debugger
+    // debugger
   }
-debugger
+// debugger
 }
-debugger
+// debugger
 
 
 console.log(fibonacci(1)); // 1

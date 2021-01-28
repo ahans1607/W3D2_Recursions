@@ -31,23 +31,23 @@ exponent(5, 5); // 3125
 ***********************************************************************/
 
 function exponent(num, power) {
-debugger  
+// debugger  
   if (power < 0){
-  debugger
+  // debugger
   if (power === -1) return 1/num
-  debugger
+  // debugger
   return 1/num * exponent(num, power + 1)
   }
   
-  debugger
+  // debugger
 
   if (power > 0){
-  debugger
+  // debugger
   if (power === 1) return num
-  debugger
+  // debugger
   return num * exponent(num, power - 1)
   }
-  debugger
+  // debugger
 }
   
 
