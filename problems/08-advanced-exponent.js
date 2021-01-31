@@ -41,7 +41,16 @@ times `advancedExponent` is being recursively called.
 
 
 function advancedExponent(b, n) {
-  // your code here
+    if (power === 0){
+      return 1;
+    };
+    if(power < 0){
+      return (1/num) * exponent(num, power + 1);
+    };
+  
+    return num * exponent(num, power - 1)
+   
+    
 }
 
 
