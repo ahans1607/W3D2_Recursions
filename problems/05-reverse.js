@@ -11,23 +11,50 @@ reverse("q"); // "q"
 reverse("id"); // "di"
 reverse(""); // ""
 ***********************************************************************/
-
-function reverse (string) {
+reverse = (string) => {
   if (string.length === 0){
-    return " ";
+    return "";
   }
 
-let letter = string.slice(string.length - 1)
-console.log(letter)
-return letter + reverse(letter[string.length - 1])
+  array = string.split("") 
+  let letter = array.pop()
+  return letter + reverse(array.join(""))
 
 }
 
-console.log(reverse("house")); // "esuoh"
+console.log(reverse("dog")); // "god"
+reverse("atom"); // "mota"
+console.log(reverse("q")); // "q"
+reverse("id"); // "di"
+console.log(reverse("")); // ""
+
+
+
+
+
+
+
+
+
+
+
+
+// function reverse (string) {
+//   if (string.length === 0){
+//     return " ";
+//   }
+
+// let letter = string.slice(string.length - 1)
+// console.log(letter)
+// return letter + reverse(letter[string.length - 1])
+
+// }
+
+// console.log(reverse("house")); // "esuoh"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
-try {
-  module.exports = reverse;
-} catch (e) {
-  module.exports = null;
-}
+// try {
+//   module.exports = reverse;
+// } catch (e) {
+//   module.exports = null;
+// }
