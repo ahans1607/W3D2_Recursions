@@ -29,31 +29,49 @@ exponent(5, 5); // 3125
       // base case if it also hits 0
       // then return 1/num * 1/num .. power times 
 ***********************************************************************/
+function exponent(num, power){
+  if (power === 0){
+    return 1;
+  };
+  if(power < 0){
+    return (1/num) * exponent(num, power + 1);
+  };
 
-function exponent(num, power) {
-// debugger  
-  if (power < 0){
-  // debugger
-  if (power === -1) return 1/num
-  // debugger
-  return 1/num * exponent(num, power + 1)
-  }
-  
-  // debugger
-
-  if (power > 0){
-  // debugger
-  if (power === 1) return num
-  // debugger
   return num * exponent(num, power - 1)
-  }
-  // debugger
-}
+ 
   
+}
 
-  // console.log(exponent(3, 2))
-  console.log(exponent(2, -2)); // 1/4 (or 0.25)
-  // console.log(exponent(5, 5)); // 3125
+ console.log(exponent(3, 2)); // 9
+ console.log(exponent(2, -2)); // 1/4 (or 0.25)
+ console.log(exponent(5, 5)); // 3125
+
+
+
+
+
+
+
+// function exponent(num, power) {
+// // debugger  
+//   if (power < 0){
+//   // debugger
+//   if (power === -1) return 1/num
+//   // debugger
+//   return 1/num * exponent(num, power + 1)
+//   }
+  
+  // debugger
+
+//   if (power > 0){
+//   // debugger
+//   if (power === 1) return num
+//   // debugger
+//   return num * exponent(num, power - 1)
+//   }
+//   // debugger
+// }
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
