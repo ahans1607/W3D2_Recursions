@@ -10,22 +10,46 @@ range(3, 4); // [3]
 range(7, 6); // []
 ***********************************************************************/
 
-function range (start, end){
-//
-  if (start >= end) return [] // base case
-  let tempStart = start + 1 //recursive step
-  let returnValue = range(tempStart, end) //recursive call
+range = (num1, num2) => {
+  if (num2 <= num1){
+    return [];
+  };
 
-  
+  return [num1].concat(range(++num1, num2))
 
-returnValue.unshift(start)
-return returnValue;
+};
 
-}
 
 console.log(range(1, 5)); // [1, 2, 3, 4]
 console.log(range(3, 4)); // [3]
 console.log(range(7, 6)); // []
+
+
+
+
+
+
+
+
+
+
+
+// function range (start, end){
+// //
+//   if (start >= end) return [] // base case
+//   let tempStart = start + 1 //recursive step
+//   let returnValue = range(tempStart, end) //recursive call
+
+  
+
+// returnValue.unshift(start)
+// return returnValue;
+
+// }
+
+// console.log(range(1, 5)); // [1, 2, 3, 4]
+// console.log(range(3, 4)); // [3]
+// console.log(range(7, 6)); // []
 
 
 
