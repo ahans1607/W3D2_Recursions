@@ -11,18 +11,14 @@ sumToN(9)  // returns 45
 sumToN(-8)  // returns null
 ***********************************************************************/
 
-sumToN = (n) => {        // (n * (n+1)) / 2;
-// let sum = 0
-  if ( n <= 0){
+sumToN = (number) => {
+  if (number < 0) {
     return null
   }
-  // if ( n > 0 ){
-  //   sum += n
-  // }
-// sum += sumToN( n - 1 )
-return sumToN(n-1) + n
+
+  return (sumToN(number -1)) + number
 }
-//
+
 console.log(sumToN(5)) // returns 15
 console.log(sumToN(1))  // returns 1
 console.log(sumToN(9))  // returns 45
