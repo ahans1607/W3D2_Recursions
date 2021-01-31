@@ -14,25 +14,36 @@ Examples:
 
 ***********************************************************************/
 
-flatten = (arr) => {
+flatten = (arr) => { 
   if (arr.length === 0){
     return []
   }
+  let newArr = []
+  arr.forEach(element => {
+    if(Array.isArray(element)){
+    newArr.push(...flatten(element))
+    }else {
+    newArr.push(element)
+    }
+    
+  });
+  
+  return newArr
 
-  value = arr.shift()
-  if(Array.isArray(value)){
-    return flatten(value).concat(flatten(arr))
-  } else {
-    return [value].concat(flatten(arr))
-  }
+
 }
 
-
-
-
-// console.log(flatten([])); // []
-// console.log(flatten([1, 2])); // [1, 2]
+console.log(flatten([])); // []
+console.log(flatten([1, 2])); // [1, 2]
 console.log(flatten([1, [2, [3]]])); // [1, 2, 3]
+
+
+
+
+
+
+
+
 
 
 
