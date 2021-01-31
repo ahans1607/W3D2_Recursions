@@ -16,10 +16,13 @@ factorial(3); // 6
 factorial(5); // 120
 ***********************************************************************/
 
-function factorial(num){
-  if (num < 0) return;
-  if (num === 0) return 1;
-  return num * factorial( n - 1)
+factorial = (number) => {
+  if (number === 1){
+    return 1
+  }
+
+  return number * factorial(number - 1)
+
 }
   
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
