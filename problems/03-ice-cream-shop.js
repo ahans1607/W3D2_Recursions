@@ -12,18 +12,50 @@ iceCreamShop(['moose tracks'], 'moose tracks'); // true
 iceCreamShop([], 'honey lavender'); // false
 ***********************************************************************/
 
-let iceCreamShop = (flavors, favorite) => {
-  if (flavors.length === 0) {
-    return false
-  }
+iceCreamShop = (flavors, favorite) => {
+  if (flavors.length === 0){
+    return false;
+  };
 
-  if (flavors[flavors.length - 1] === favorite) {
-    return true;
-  }
+  let compare = flavors.shift();
+    if(compare.includes(favorite)){
+      return true ;
+    };
 
-  flavors.pop();
-  return iceCreamShop(flavors, favorite);
-}
+    return iceCreamShop(flavors, favorite);
+  
+};
+
+// iceCreamShop(['vanilla', 'strawberry'], 'blue moon'); // false
+// iceCreamShop(['pistachio', 'green tea', 'chocolate', 'mint chip'], 'green tea'); // true
+// console.log(iceCreamShop(['cookies n cream', 'blue moon', 'superman', 'honey lavender', 'sea salt caramel'], 'pistachio')); // false
+// console.log(iceCreamShop(['moose tracks'], 'moose tracks')); // true
+// iceCreamShop([], 'honey lavender'); // false
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let iceCreamShop = (flavors, favorite) => {
+//   if (flavors.length === 0) {
+//     return false
+//   }
+
+//   if (flavors[flavors.length - 1] === favorite) {
+//     return true;
+//   }
+
+//   flavors.pop();
+//   return iceCreamShop(flavors, favorite);
+// }
 
 
 
@@ -41,8 +73,8 @@ let iceCreamShop = (flavors, favorite) => {
 
 // iceCreamShop(['vanilla', 'strawberry'], 'blue moon'); // false
 // iceCreamShop(['pistachio', 'green tea', 'chocolate', 'mint chip'], 'green tea'); // true
-console.log(iceCreamShop(['cookies n cream', 'blue moon', 'superman', 'honey lavender', 'sea salt caramel'], 'pistachio')); // false
-console.log(iceCreamShop(['moose tracks'], 'moose tracks')); // true
+// console.log(iceCreamShop(['cookies n cream', 'blue moon', 'superman', 'honey lavender', 'sea salt caramel'], 'pistachio')); // false
+// console.log(iceCreamShop(['moose tracks'], 'moose tracks')); // true
 // iceCreamShop([], 'honey lavender'); // false
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
